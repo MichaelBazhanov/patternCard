@@ -7,12 +7,12 @@ import svg_sale from "../../assets/images/sale.svg";
 const BeforeCard = () => {
   return (
     <section
-      className="px-4 w-1/2 h-screen flex flex-col items-center
+      className="px-4 w-1/2 h-screen flex flex-col justify-between items-center
     bg-gradient-to-t from-cyan-300 via-blue-400 to-teal-400"
     >
       <h2 className="font-extrabold text-4xl text-center mt-4">Before Card</h2>
 
-      <div className="max-w-[422px] min-w-[260px] bg-white mt-[50%]">
+      <div className="max-w-[422px] min-w-[260px] bg-white">
         <div className="relative">
           <a href="/link-img" className="cursor-pointer">
             <img src={img_divan} alt="img" />
@@ -74,9 +74,8 @@ const BeforeCard = () => {
         </div>
       </div>
 
-      <p className="mt-auto mb-4">
+      <p className="max-h-52 h-full flex flex-col justify-end">
         Стандартная карточка товара интернет магазина
-        &nbsp;
         <a
           href="https://www.divan.ru/vladimir/"
           className="font-medium text-slate-600"

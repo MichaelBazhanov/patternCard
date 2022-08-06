@@ -5,18 +5,29 @@ import svg_trends from "../../assets/images/trends.svg";
 import svg_sale from "../../assets/images/sale.svg";
 
 // test HandySvg
-import Svg from '../svg'
+import Svg from "../svg";
+import { useState } from "react";
+
+function classNames(...classes) {
+  return classes.filter(Boolean).join(" ");
+}
 
 const AfterCard = () => {
+  const [like, setLike] = useState(false);
+  const [sale, setSale] = useState(false);
+  const [trends, setTrends] = useState(false);
+  const [inStock, setInStock] = useState(false);
+
   return (
     <section
-      className="px-4 w-1/2 h-screen flex flex-col items-center
+      className="px-4 w-1/2 h-screen flex flex-col justify-between items-center
     bg-gradient-to-t from-indigo-500 via-purple-500 to-pink-500"
     >
       <h2 className="font-extrabold text-4xl text-center mt-4">After Card</h2>
 
-      <div className="w-full max-w-[422px] min-w-[260px] bg-white mt-[50%]">
+      <div className="w-full max-w-[422px] min-w-[260px] bg-white">
         <div className="relative">
+          {/* COMPONENT IMG */}
           <a
             href="/link-img"
             className="cursor-pointer block relative landscape:pb-[66.25%] portrait:pb-[75%]"
@@ -28,40 +39,68 @@ const AfterCard = () => {
             />
           </a>
 
-          <Svg src={img_divan}/>
+          {/* COMPONENT LIKE */}
+          <div onClick={() => setLike(!like)}>
+            <Svg
+              src={svg_like}
+              className={classNames(
+                `
+                z-[2] object-contain cursor-pointer
+                absolute top-[20px] right-[20px]
+                transition-[opacity,colors] ease-in-out duration-200 hover:opacity-50
+                stroke-neutral-700`,
+                like ? "fill-neutral-700" : "fill-transparent"
+              )}
+              width="23"
+              height="22"
+            />
+          </div>
 
-          <img
-            src={svg_like}
-            alt="like"
-            className="z-[2] object-contain cursor-pointer absolute top-[20px] right-[20px]
-            transition-opacity ease-in-out duration-200 hover:opacity-50
-            "
-          />
-
+          {/* COMPONENT DESCRIPTION ITEM */}
           <div className="flex justify-end absolute bottom-[15px] right-[15px]">
-            <div className="flex justify-center items-center flex-shrink-0 rounded-full w-[50px] h-[50px] 3xl:w-[60px] 3xl:h-[60px] mr-[10px]">
-              <img
+            <a
+              href="/category-sale"
+              className="flex justify-center items-center flex-shrink-0 rounded-full w-[50px] h-[50px] 3xl:w-[60px] 3xl:h-[60px] mr-[10px]"
+            >
+              <Svg
                 src={svg_sale}
-                alt="sale"
-                className="object-cover cursor-grab block"
+                className={classNames(
+                  `object-cover cursor-grab block transition-[opacity,colors] ease-in-out duration-200 hover:opacity-75 text-gray-500 hover:text-red-500`
+                )}
+                width="60"
+                height="60"
               />
-            </div>
-            <div className="flex justify-center items-center flex-shrink-0 rounded-full w-[50px] h-[50px] 3xl:w-[60px] 3xl:h-[60px] mr-[10px]">
-              <img
+            </a>
+            <a
+              href="/category-trends"
+              className="flex justify-center items-center flex-shrink-0 rounded-full w-[50px] h-[50px] 3xl:w-[60px] 3xl:h-[60px] mr-[10px]"
+            >
+              <Svg
                 src={svg_trends}
-                alt="trends"
-                className="object-cover cursor-grab block"
+                className={classNames(
+                  `object-cover cursor-grab block transition-[opacity,colors] ease-in-out duration-200 hover:opacity-75 text-gray-500 hover:text-red-500`
+                )}
+                width="60"
+                height="60"
               />
-            </div>
-            <div className="flex justify-center items-center flex-shrink-0 rounded-full w-[50px] h-[50px] 3xl:w-[60px] 3xl:h-[60px]">
-              <img
+            </a>
+            <a
+              href="/category-in-stock"
+              className="flex justify-center items-center flex-shrink-0 rounded-full w-[50px] h-[50px] 3xl:w-[60px] 3xl:h-[60px]"
+            >
+              <Svg
                 src={svg_in_stock}
-                alt="stock"
-                className="object-cover cursor-grab"
+                className={classNames(
+                  `object-cover cursor-grab block transition-[opacity,colors] ease-in-out duration-200 hover:opacity-75 text-gray-500 hover:text-red-500`
+                )}
+                width="60"
+                height="60"
               />
-            </div>
+            </a>
           </div>
         </div>
+
+        {/* COMPONENT CARD */}
         <div className="mt-[20px]">
           <a
             href="/link-divan"
@@ -86,15 +125,19 @@ const AfterCard = () => {
         </div>
       </div>
 
-      <p className="mt-auto mb-4">
+      <p className="max-h-52 h-full flex flex-col justify-end">
         <b className="block">
-          Задача: Сделать на карточке товара множество ссылок на акции категории
-          и тд и тп
+          Задача:
+          <br />
+          1) Реализовать на карточке товара множество ссылок на акции,
+          категории, и тд и тп.
+          <br />
+          2) Реализовать простую работу с векторной графикой (SVG) на карточке
+          товара.
         </b>
         <span>
           Простая семантическая карточка ссылка, по версии WebStandards 2022
         </span>
-        &nbsp;
         <a
           href="https://ru.ariarzer.dev/tutorials/2022/easy-semantic-card-link.html"
           className="font-medium text-slate-600"

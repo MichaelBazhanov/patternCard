@@ -1,7 +1,7 @@
 import { HandySvg } from "handy-svg";
 
-const Svg = ({ src, width, height, fill, stroke, strokeWidth }) => {
-  return <HandySvg src={src} width={width} height={height} />;
+const Svg = ({ src, width, height, className }) => {
+  return <HandySvg src={src} width={width} height={height} className={className}/>;
 };
 
 export default Svg;
