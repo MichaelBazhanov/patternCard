@@ -4,6 +4,9 @@ import svg_in_stock from "../../assets/images/in-stock.svg";
 import svg_trends from "../../assets/images/trends.svg";
 import svg_sale from "../../assets/images/sale.svg";
 
+// test HandySvg
+import Svg from '../svg'
+
 const AfterCard = () => {
   return (
     <section
@@ -12,11 +15,20 @@ const AfterCard = () => {
     >
       <h2 className="font-extrabold text-4xl text-center mt-4">After Card</h2>
 
-      <div className="max-w-[422px] min-w-[260px] bg-white mt-[50%]">
+      <div className="w-full max-w-[422px] min-w-[260px] bg-white mt-[50%]">
         <div className="relative">
-          <a href="/link-img" className="cursor-pointer">
-            <img src={img_divan} alt="img" />
+          <a
+            href="/link-img"
+            className="cursor-pointer block relative landscape:pb-[66.25%] portrait:pb-[75%]"
+          >
+            <img
+              src={img_divan}
+              alt="img"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
           </a>
+
+          <Svg src={img_divan}/>
 
           <img
             src={svg_like}
@@ -75,8 +87,13 @@ const AfterCard = () => {
       </div>
 
       <p className="mt-auto mb-4">
-        <b className="block">Задача: Сделать на карточке товара множество ссылок на акции категории и тд и тп</b>
-        <span>Простая семантическая карточка ссылка, по версии WebStandards 2022</span>
+        <b className="block">
+          Задача: Сделать на карточке товара множество ссылок на акции категории
+          и тд и тп
+        </b>
+        <span>
+          Простая семантическая карточка ссылка, по версии WebStandards 2022
+        </span>
         &nbsp;
         <a
           href="https://ru.ariarzer.dev/tutorials/2022/easy-semantic-card-link.html"
