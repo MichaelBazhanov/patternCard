@@ -14,9 +14,6 @@ function classNames(...classes) {
 
 const AfterCard = () => {
   const [like, setLike] = useState(false);
-  const [sale, setSale] = useState(false);
-  const [trends, setTrends] = useState(false);
-  const [inStock, setInStock] = useState(false);
 
   return (
     <section
@@ -25,7 +22,8 @@ const AfterCard = () => {
     >
       <h2 className="font-extrabold text-4xl text-center mt-4">After Card</h2>
 
-      <div className="w-full max-w-[422px] min-w-[260px] bg-white">
+      <article className="w-full max-w-[422px] min-w-[260px] bg-white select-none">
+        {/* COMPONENT CARD */}
         <div className="relative">
           {/* COMPONENT IMG */}
           <a
@@ -56,7 +54,7 @@ const AfterCard = () => {
             />
           </div>
 
-          {/* COMPONENT DESCRIPTION ITEM */}
+          {/* COMPONENT DESCRIPTION CARD */}
           <div className="flex justify-end absolute bottom-[15px] right-[15px]">
             <a
               href="/category-sale"
@@ -100,7 +98,7 @@ const AfterCard = () => {
           </div>
         </div>
 
-        {/* COMPONENT CARD */}
+        {/* COMPONENT DESCRIPTION PRICE */}
         <div className="mt-[20px]">
           <a
             href="/link-divan"
@@ -109,11 +107,11 @@ const AfterCard = () => {
             Диван Динс Мини Velvet Yellow
           </a>
           <div className="flex items-baseline">
-            <span className="text-lg font-medium text-red-500 after:content-['\20BD'] after:ml-1">
+            <span className="text-lg font-medium text-red-500 after:content-['\20bd'] after:ml-1">
               39 990
             </span>
             &nbsp;
-            <span className="ml-[10px] text-lg font-medium line-through text-gray-400 after:content-['\20BD'] after:ml-1">
+            <span className="ml-[10px] text-lg font-medium line-through text-gray-400 after:content-['\20bd'] after:ml-1">
               62 290
             </span>
             <div className="bg-label bg-no-repeat bg-contain  w-[50px] h-[24px] font-medium text-gray-400 text-sm ml-[10px]">
@@ -123,7 +121,7 @@ const AfterCard = () => {
             </div>
           </div>
         </div>
-      </div>
+      </article>
 
       <p className="max-h-52 h-full flex flex-col justify-end">
         <b className="block">
