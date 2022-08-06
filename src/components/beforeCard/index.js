@@ -6,8 +6,10 @@ import svg_sale from "../../assets/images/sale.svg";
 
 const BeforeCard = () => {
   return (
-    <section className="px-4 w-1/2 h-screen flex flex-col justify-between items-center
-    bg-gradient-to-t from-cyan-300 via-blue-400 to-teal-400">
+    <section
+      className="px-4 w-1/2 h-screen flex flex-col justify-between items-center
+    bg-gradient-to-t from-cyan-300 via-blue-400 to-teal-400"
+    >
       <h2 className="font-extrabold text-4xl text-center mt-4">Before Card</h2>
 
       <div className="max-w-[422px] min-w-[260px] bg-white">
@@ -64,15 +66,22 @@ const BeforeCard = () => {
               62 290
             </span>
             <div className="bg-label bg-no-repeat bg-contain  w-[50px] h-[24px] font-medium text-gray-400 text-sm ml-[10px]">
-              <div className="flex justify-center items-center pl-[5px]">-35%</div>
+              <div className="flex justify-center items-center pl-[5px]">
+                -35%
+              </div>
             </div>
           </div>
         </div>
       </div>
 
       <p className="mb-4">
-        Стандартная карточка товара интернет магазина{" "}
-        <a href="https://www.divan.ru/vladimir/" className="font-medium text-red-600">Диван.ru</a>{" "}
+        Стандартная карточка товара интернет магазина
+        <a
+          href="https://www.divan.ru/vladimir/"
+          className="font-medium text-red-600"
+        >
+          Диван.ru
+        </a>
       </p>
     </section>
   );
