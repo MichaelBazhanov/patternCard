@@ -1,4 +1,4 @@
-import img_divan from "../../assets/images/internet-sales-hits.jpg";
+import img_divan from "../../assets/images/internet-sales-hits-img.jpg";
 import svg_like from "../../assets/images/like.svg";
 import svg_in_stock from "../../assets/images/in-stock.svg";
 import svg_trends from "../../assets/images/trends.svg";
@@ -7,7 +7,7 @@ import svg_sale from "../../assets/images/sale.svg";
 const BeforeCard = () => {
   return (
     <section
-      className="px-4 w-1/2 h-screen flex flex-col justify-between items-center
+      className="px-4 w-full 2sm:w-1/2 h-[calc(100vh-60px)] overflow-hidden flex flex-col justify-between items-center
     bg-gradient-to-t from-cyan-300 via-blue-400 to-teal-400"
     >
       <h2 className="font-extrabold text-4xl text-center mt-4">Before Card</h2>
