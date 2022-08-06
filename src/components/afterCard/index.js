@@ -7,12 +7,12 @@ import svg_sale from "../../assets/images/sale.svg";
 const AfterCard = () => {
   return (
     <section
-      className="px-4 w-1/2 h-screen flex flex-col justify-between items-center
+      className="px-4 w-1/2 h-screen flex flex-col items-center
     bg-gradient-to-t from-indigo-500 via-purple-500 to-pink-500"
     >
       <h2 className="font-extrabold text-4xl text-center mt-4">After Card</h2>
 
-      <div className="max-w-[422px] min-w-[260px] bg-white">
+      <div className="max-w-[422px] min-w-[260px] bg-white mt-[50%]">
         <div className="relative">
           <a href="/link-img" className="cursor-pointer">
             <img src={img_divan} alt="img" />
@@ -74,12 +74,13 @@ const AfterCard = () => {
         </div>
       </div>
 
-      <p className="mb-4">
+      <p className="mt-auto mb-4">
         <b className="block">Задача: Сделать на карточке товара множество ссылок на акции категории и тд и тп</b>
         <span>Простая семантическая карточка ссылка, по версии WebStandards 2022</span>
+        &nbsp;
         <a
           href="https://ru.ariarzer.dev/tutorials/2022/easy-semantic-card-link.html"
-          className="font-medium text-red-600"
+          className="font-medium text-slate-600"
         >
           (ссылка на саму статью)
         </a>
