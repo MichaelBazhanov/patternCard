@@ -1,4 +1,4 @@
-import img from "../../assets/images/Internet sales hits.jpg";
+import img from "../../assets/images/internet-sales-hits-img.jpg";
 
 const AfterCard = () => {
   return (
