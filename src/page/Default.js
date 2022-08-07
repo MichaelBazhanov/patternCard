@@ -1,9 +1,5 @@
-import DefaultCard from "../components/defaultCard";
+import DefaultCard from "../components/exampleDefault/defaultCard/index";
 
-const Default = () => (
-  <div>
-    <DefaultCard />
-  </div>
-);
+const DefaultComponent = () => <DefaultCard />;
 
-export default Default;
+export default DefaultComponent;

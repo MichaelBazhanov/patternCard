@@ -1,11 +1,11 @@
-import img_divan from "../../assets/images/internet-sales-hits-img.jpg";
-import svg_like from "../../assets/images/like.svg";
-import svg_in_stock from "../../assets/images/in-stock.svg";
-import svg_trends from "../../assets/images/trends.svg";
-import svg_sale from "../../assets/images/sale.svg";
+import img_divan from "../../../assets/images/internet-sales-hits-img.jpg";
+import svg_like from "../../../assets/images/like.svg";
+import svg_in_stock from "../../../assets/images/in-stock.svg";
+import svg_trends from "../../../assets/images/trends.svg";
+import svg_sale from "../../../assets/images/sale.svg";
 
 // test HandySvg
-import Svg from "../svg";
+import Svg from "../../svg";
 import { useState } from "react";
 
 function classNames(...classes) {
@@ -18,7 +18,7 @@ const AfterCard = () => {
   return (
     <section
       className="px-4 w-full 2sm:w-1/2 h-[calc(100vh-60px)] flex flex-col justify-between items-center
-    bg-gradient-to-t from-indigo-500 via-purple-500 to-pink-500"
+    bg-gradient-to-t from-white  to-fuchsia-400"
     >
       <h2 className="font-extrabold text-4xl text-center mt-4">After Card</h2>
 
