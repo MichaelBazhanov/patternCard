@@ -41,7 +41,8 @@ const Layout = () => {
               `fixed z-[1000] left-[-300px] lg:left-0
               sm:w-15 lg:w-[300px] h-full
               bg-fuchsia-400 overflow-hidden transition-[width,left] ease-in-out`,
-              active ? "active" : ""
+              // active ? `active` : ``
+              active ? `left-0 w-full lg:w-15` : ``
             )}
           >
             <ul className="absolute left-0 top-0 w-full text-white">
@@ -137,7 +138,8 @@ const Layout = () => {
             `absolute left-0 lg:left-[300px]
             w-full lg:w-[calc(100%-300px)] min-h-screen
             bg-white transition-[width,left] ease-in-out`,
-            active ? "active" : ""
+            // active ? "active" : ""
+            active ? `sm:left-15 sm:w-[calc(100%-60px)] lg:left-15 lg:w-[calc(100%-60px)]` : ``
           )}
         >
           {/* <!-- top bar --> */}
@@ -150,7 +152,9 @@ const Layout = () => {
                 `relative z-[2000]
                 w-15 h-15
                 flex justify-center items-center flex-shrink-0 text-fuchsia-400 cursor-pointer`,
-                active ? "active" : ""
+                // active ? "active" : ""
+                active ? `fixed sm:static left-[calc(100%-60px)] sm:left-auto
+                !text-white sm:!text-inherit` : ``,
               )}
             >
               <Svg

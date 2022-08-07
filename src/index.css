@@ -4,15 +4,15 @@
 
 
 @layer base {
-  #navigation.active {
+  /* #navigation.active {
     @apply left-0 w-full sm:w-15
-  }
-  #main.active {
+  } */
+  /* #main.active {
     @apply left-15 w-[calc(100%-60px)]
-  }
-  #toggle-menu.active {
+  } */
+  /* #toggle-menu.active {
     @apply text-white sm:text-inherit left-[calc(100%-60px)] sm:left-auto fixed sm:static
-  }
+  } */
   /* animation padding */
   #navigation li:not(:nth-child(1)) {
     @apply hover:px-5 sm:hover:px-0 lg:hover:pl-5 transition-all
