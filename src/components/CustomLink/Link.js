@@ -1,28 +1,38 @@
 import React from "react";
 import { Link, useMatch } from "react-router-dom";
 
-const LinkCustom = ({ children, to, ...props }) => {
-	// const match = useMatch(to); // хорошо работает без вложенных роутеров
-	const match = useMatch({ // хорошо работает с вложенными роутерами
-		path: to,
-		end: to.length === 1
-	});
-	console.log(match)
-
-	return (
-		<Link
-			to={to}
-			style={{
-				color: match ? 'red' : '',
-			}}
-			{...props}
-		>
-			{children}
-		</Link>
-	)
+function classNames(...classes) {
+  return classes.filter(Boolean).join(" ");
 }
 
-export default LinkCustom
+const LinkCustom = ({ children, to, active, title, ...props }) => {
+  const match = useMatch({
+    path: to,
+    end: to.length === 1,
+  });
 
-// Общая идея в том что этот Link мы можем обернуть во что угодно
+  return (
 
+    <Link
+      to={to}
+      title={title}
+      className={classNames(
+        `navigation-item`,
+        active
+          ? `
+						before:shadow-transparent after:shadow-transparent sm:before:shadow-white sm:after:shadow-white
+						hover:before:shadow-transparent hover:after:shadow-transparent sm:hover:before:shadow-white sm:hover:after:shadow-white
+						rounded-tr-full rounded-br-full`
+          : ``,
+        match
+          ? `
+						bg-white text-fuchsia-400 before:shadow-rounded-top after:shadow-rounded-bottom`
+          : ``
+      )}
+    >
+      {children}
+    </Link>
+  );
+};
+
+export default LinkCustom;

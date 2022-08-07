@@ -4,6 +4,7 @@ import Svg from "../components/svg";
 import general_svg from "../assets/images/general.svg";
 import card_svg from "../assets/images/card.svg";
 import toggle_bar_svg from "../assets/images/toggle-bar.svg";
+import CustomLink from "../components/CustomLink/Link";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -64,21 +65,13 @@ const Layout = () => {
 
               <li
               className={classNames(
-                `hover:px-5 sm:hover:px-0 lg:hover:pl-5 transition-all`,
+                `hover:px-5 sm:hover:px-0 transition-all`,
                 active ? `` : `lg:hover:pl-5`
               )}>
-                <Link
+                <CustomLink
                   title="Default example"
                   to="/"
-                  className={classNames(
-                    // `navigation-item hovered`,
-                    `navigation-item`,
-                    // active ? `active` : ``
-                    active ? `
-                    before:shadow-transparent after:shadow-transparent sm:before:shadow-white sm:after:shadow-white
-                    hover:before:shadow-transparent hover:after:shadow-transparent sm:hover:before:shadow-white sm:hover:after:shadow-white
-                    rounded-tr-full rounded-br-full` : ``
-                  )}
+                  active={active}
                 >
                   <Svg
                     src={card_svg}
@@ -87,27 +80,18 @@ const Layout = () => {
                     height="24"
                   />
                   <span className="whitespace-nowrap">Default example</span>
-                </Link>
+                </CustomLink>
               </li>
 
               <li
               className={classNames(
-                `hover:px-5 sm:hover:px-0 lg:hover:pl-5 transition-all`,
+                `hover:px-5 sm:hover:px-0 transition-all`,
                 active ? `` : `lg:hover:pl-5`
               )}>
-                <Link
+                <CustomLink
                   title="Internet sales hits"
                   to="/internet-sales-hits"
-                  // className="navigation-item"
-                  className={classNames(
-                    // `navigation-item hovered`,
-                    `navigation-item`,
-                    // active ? `active` : ``
-                    active ? `
-                    before:shadow-transparent after:shadow-transparent sm:before:shadow-white sm:after:shadow-white
-                    hover:before:shadow-transparent hover:after:shadow-transparent sm:hover:before:shadow-white sm:hover:after:shadow-white
-                    rounded-tr-full rounded-br-full` : ``
-                  )}
+                  active={active}
                 >
                   <Svg
                     src={card_svg}
@@ -116,26 +100,18 @@ const Layout = () => {
                     height="24"
                   />
                   <span className="whitespace-nowrap">Internet sales hits</span>
-                </Link>
+                </CustomLink>
               </li>
 
               <li
               className={classNames(
-                `hover:px-5 sm:hover:px-0 lg:hover:pl-5 transition-all`,
+                `hover:px-5 sm:hover:px-0 transition-all`,
                 active ? `` : `lg:hover:pl-5`
               )}>
-                <Link
+                <CustomLink
                   to="/recommended-today"
                   title="Recommended today"
-                  className={classNames(
-                    // `navigation-item hovered`,
-                    `navigation-item`,
-                    // active ? `active` : ``
-                    active ? `
-                    before:shadow-transparent after:shadow-transparent sm:before:shadow-white sm:after:shadow-white
-                    hover:before:shadow-transparent hover:after:shadow-transparent sm:hover:before:shadow-white sm:hover:after:shadow-white
-                    rounded-tr-full rounded-br-full` : ``
-                  )}
+                  active={active}
                 >
                   <Svg
                     src={card_svg}
@@ -145,7 +121,7 @@ const Layout = () => {
                   />
 
                   <span className="whitespace-nowrap">Recommended today</span>
-                </Link>
+                </CustomLink>
               </li>
 
               <li
@@ -153,18 +129,10 @@ const Layout = () => {
                 `hover:px-5 sm:hover:px-0 transition-all`,
                 active ? `` : `lg:hover:pl-5`
               )}>
-                <Link
+                <CustomLink
                   to="/popular-categories"
                   title="Popular categories"
-                  className={classNames(
-                    // `navigation-item hovered`,
-                    `navigation-item`,
-                    // active ? `active` : ``
-                    active ? `
-                    before:shadow-transparent after:shadow-transparent sm:before:shadow-white sm:after:shadow-white
-                    hover:before:shadow-transparent hover:after:shadow-transparent sm:hover:before:shadow-white sm:hover:after:shadow-white
-                    rounded-tr-full rounded-br-full` : ``
-                  )}
+                  active={active}
                 >
                   <Svg
                     src={card_svg}
@@ -174,7 +142,7 @@ const Layout = () => {
                   />
 
                   <span className="whitespace-nowrap">Popular categories</span>
-                </Link>
+                </CustomLink>
               </li>
             </ul>
           </div>
