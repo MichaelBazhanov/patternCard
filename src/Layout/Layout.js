@@ -62,11 +62,23 @@ const Layout = () => {
                 </div>
               </li>
 
-              <li>
+              <li
+              className={classNames(
+                `hover:px-5 sm:hover:px-0 lg:hover:pl-5 transition-all`,
+                active ? `` : `lg:hover:pl-5`
+              )}>
                 <Link
                   title="Default example"
                   to="/"
-                  className="navigation-item hovered"
+                  className={classNames(
+                    // `navigation-item hovered`,
+                    `navigation-item`,
+                    // active ? `active` : ``
+                    active ? `
+                    before:shadow-transparent after:shadow-transparent sm:before:shadow-white sm:after:shadow-white
+                    hover:before:shadow-transparent hover:after:shadow-transparent sm:hover:before:shadow-white sm:hover:after:shadow-white
+                    rounded-tr-full rounded-br-full` : ``
+                  )}
                 >
                   <Svg
                     src={card_svg}
@@ -78,11 +90,24 @@ const Layout = () => {
                 </Link>
               </li>
 
-              <li>
+              <li
+              className={classNames(
+                `hover:px-5 sm:hover:px-0 lg:hover:pl-5 transition-all`,
+                active ? `` : `lg:hover:pl-5`
+              )}>
                 <Link
                   title="Internet sales hits"
                   to="/internet-sales-hits"
-                  className="navigation-item hovered"
+                  // className="navigation-item"
+                  className={classNames(
+                    // `navigation-item hovered`,
+                    `navigation-item`,
+                    // active ? `active` : ``
+                    active ? `
+                    before:shadow-transparent after:shadow-transparent sm:before:shadow-white sm:after:shadow-white
+                    hover:before:shadow-transparent hover:after:shadow-transparent sm:hover:before:shadow-white sm:hover:after:shadow-white
+                    rounded-tr-full rounded-br-full` : ``
+                  )}
                 >
                   <Svg
                     src={card_svg}
@@ -94,11 +119,23 @@ const Layout = () => {
                 </Link>
               </li>
 
-              <li>
+              <li
+              className={classNames(
+                `hover:px-5 sm:hover:px-0 lg:hover:pl-5 transition-all`,
+                active ? `` : `lg:hover:pl-5`
+              )}>
                 <Link
                   to="/recommended-today"
-                  className="navigation-item"
                   title="Recommended today"
+                  className={classNames(
+                    // `navigation-item hovered`,
+                    `navigation-item`,
+                    // active ? `active` : ``
+                    active ? `
+                    before:shadow-transparent after:shadow-transparent sm:before:shadow-white sm:after:shadow-white
+                    hover:before:shadow-transparent hover:after:shadow-transparent sm:hover:before:shadow-white sm:hover:after:shadow-white
+                    rounded-tr-full rounded-br-full` : ``
+                  )}
                 >
                   <Svg
                     src={card_svg}
@@ -111,11 +148,23 @@ const Layout = () => {
                 </Link>
               </li>
 
-              <li>
+              <li
+              className={classNames(
+                `hover:px-5 sm:hover:px-0 transition-all`,
+                active ? `` : `lg:hover:pl-5`
+              )}>
                 <Link
                   to="/popular-categories"
-                  className="navigation-item"
                   title="Popular categories"
+                  className={classNames(
+                    // `navigation-item hovered`,
+                    `navigation-item`,
+                    // active ? `active` : ``
+                    active ? `
+                    before:shadow-transparent after:shadow-transparent sm:before:shadow-white sm:after:shadow-white
+                    hover:before:shadow-transparent hover:after:shadow-transparent sm:hover:before:shadow-white sm:hover:after:shadow-white
+                    rounded-tr-full rounded-br-full` : ``
+                  )}
                 >
                   <Svg
                     src={card_svg}
