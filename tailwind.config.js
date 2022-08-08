@@ -9,7 +9,8 @@ module.exports = {
         '3xl': '1920px',
       },
       backgroundImage: {
-        'label': "url('./assets/images/label.svg')"
+        'label': "url('./assets/images/label.svg')",
+        'left-arrow': "url('./assets/images/left-arrow.svg')"
       },
       spacing: {
         '4.5': '1.125rem', // 18px
