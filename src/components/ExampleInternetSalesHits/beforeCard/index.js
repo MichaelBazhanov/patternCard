@@ -5,15 +5,29 @@ import svg_trends from "../../../assets/images/trends.svg";
 import svg_sale from "../../../assets/images/sale.svg";
 
 const BeforeCard = () => {
+  const alertFunction = (e) => {
+    e.stopPropagation();
+    e.preventDefault();
+
+    const a = e.target.closest("a");
+    const href = a.href;
+    const link = a.dataset.link;
+
+    alert(`${link} ::: Переход по ссылке : ${href}`);
+  };
+
   return (
-    <section
-      className="px-4 w-full 2sm:w-1/2 h-[calc(100vh-60px)] overflow-hidden flex flex-col justify-between items-center"
-    >
+    <section className="px-4 w-full 2sm:w-1/2 h-[calc(100vh-60px)] overflow-hidden flex flex-col justify-between items-center">
       <h2 className="font-extrabold text-4xl text-center mt-4">Before Card</h2>
 
       <div className="max-w-[422px] min-w-[260px] bg-white">
         <div className="relative">
-          <a href="/link-img" className="cursor-pointer">
+          <a
+            onClick={alertFunction}
+            data-link="Карточка товара (c множеством ссылок)"
+            href="/following-a-link"
+            className="cursor-pointer"
+          >
             <img src={img_divan} alt="img" />
           </a>
 
@@ -51,7 +65,9 @@ const BeforeCard = () => {
         </div>
         <div className="mt-[20px]">
           <a
-            href="/link-divan"
+            onClick={alertFunction}
+            data-link="Карточка товара (c множеством ссылок)"
+            href="/following-a-link"
             className="inline-block max-w-full overflow-hidden whitespace-nowrap text-ellipsis"
           >
             Диван Динс Мини Velvet Yellow

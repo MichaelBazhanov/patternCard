@@ -4,25 +4,6 @@
 
 
 @layer base {
-  /* #navigation.active {
-    @apply left-0 w-full sm:w-15
-  } */
-  /* #main.active {
-    @apply left-15 w-[calc(100%-60px)]
-  } */
-  /* #toggle-menu.active {
-    @apply text-white sm:text-inherit left-[calc(100%-60px)] sm:left-auto fixed sm:static
-  } */
-  /* animation padding */
-  /* #navigation li:not(:nth-child(1)) {
-    @apply hover:px-5 sm:hover:px-0 lg:hover:pl-5 transition-all
-  }
-  #navigation.active li:not(:nth-child(1)) {
-    @apply hover:px-5 sm:hover:px-0
-  } */
-  /* #navigation.active .navigation-item {
-    @apply before:shadow-transparent after:shadow-transparent sm:before:shadow-white sm:after:shadow-white rounded-tr-full rounded-br-full
-  } */
   /* scroll */
   html ::-webkit-scrollbar {
     @apply bg-neutral-100 w-2 h-2;
@@ -45,21 +26,3 @@
     hover:after:shadow-rounded-bottom
   }
 }
-/* @layer utilities {
-  .hovered {
-    @apply bg-white text-fuchsia-400 before:shadow-rounded-top after:shadow-rounded-bottom
-  }
-} */
-
-/* Придумать как до 640 перехватить роутинг на навигации и закрывать навигуцию поле роута !!!! */
-/* Придумать как до 640 перехватить роутинг на навигации и закрывать навигуцию поле роута !!!! */
-/* Придумать как до 640 перехватить роутинг на навигации и закрывать навигуцию поле роута !!!! */
-/* Придумать как до 640 перехватить роутинг на навигации и закрывать навигуцию поле роута !!!! */
-/* Придумать как до 640 перехватить роутинг на навигации и закрывать навигуцию поле роута !!!! */
-/* Придумать как до 640 перехватить роутинг на навигации и закрывать навигуцию поле роута !!!! */
-/* Придумать как до 640 перехватить роутинг на навигации и закрывать навигуцию поле роута !!!! */
-/* Придумать как до 640 перехватить роутинг на навигации и закрывать навигуцию поле роута !!!! */
-/* Придумать как до 640 перехватить роутинг на навигации и закрывать навигуцию поле роута !!!! */
-/* Придумать как до 640 перехватить роутинг на навигации и закрывать навигуцию поле роута !!!! */
-/* Придумать как до 640 перехватить роутинг на навигации и закрывать навигуцию поле роута !!!! */
-/* Придумать как до 640 перехватить роутинг на навигации и закрывать навигуцию поле роута !!!! */

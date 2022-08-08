@@ -15,6 +15,17 @@ function classNames(...classes) {
 const AfterCard = () => {
   const [like, setLike] = useState(false);
 
+  const alertFunction = (e) => {
+    e.stopPropagation();
+    e.preventDefault();
+
+    const a = e.target.closest("a");
+    const href = a.href;
+    const link = a.dataset.link;
+
+    alert(`${link} ::: Переход по ссылке : ${href}`);
+  };
+
   return (
     <section
       className="px-4 w-full 2sm:w-1/2 h-[calc(100vh-60px)] flex flex-col justify-between items-center
@@ -27,7 +38,9 @@ const AfterCard = () => {
         <div className="relative">
           {/* COMPONENT IMG */}
           <a
-            href="/link-img"
+            onClick={alertFunction}
+            data-link="Карточка товара (c множеством ссылок)"
+            href="/following-a-link-1"
             className="cursor-pointer block relative landscape:pb-[66.25%] portrait:pb-[75%]"
           >
             <img
@@ -57,6 +70,8 @@ const AfterCard = () => {
           {/* COMPONENT DESCRIPTION CARD */}
           <div className="flex justify-end absolute bottom-[15px] right-[15px]">
             <a
+              onClick={alertFunction}
+              data-link="Карточка товара (c множеством ссылок)"
               href="/category-sale"
               className="flex justify-center items-center flex-shrink-0 rounded-full w-[50px] h-[50px] 3xl:w-[60px] 3xl:h-[60px] mr-[10px]"
             >
@@ -70,6 +85,8 @@ const AfterCard = () => {
               />
             </a>
             <a
+              onClick={alertFunction}
+              data-link="Карточка товара (c множеством ссылок)"
               href="/category-trends"
               className="flex justify-center items-center flex-shrink-0 rounded-full w-[50px] h-[50px] 3xl:w-[60px] 3xl:h-[60px] mr-[10px]"
             >
@@ -83,6 +100,8 @@ const AfterCard = () => {
               />
             </a>
             <a
+              onClick={alertFunction}
+              data-link="Карточка товара (c множеством ссылок)"
               href="/category-in-stock"
               className="flex justify-center items-center flex-shrink-0 rounded-full w-[50px] h-[50px] 3xl:w-[60px] 3xl:h-[60px]"
             >
@@ -101,6 +120,8 @@ const AfterCard = () => {
         {/* COMPONENT DESCRIPTION PRICE */}
         <div className="mt-[20px]">
           <a
+            onClick={alertFunction}
+            data-link="Карточка товара (c множеством ссылок)"
             href="/link-divan"
             className="inline-block max-w-full overflow-hidden whitespace-nowrap text-ellipsis"
           >

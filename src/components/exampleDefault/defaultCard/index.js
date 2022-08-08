@@ -2,24 +2,42 @@ import img from "../../../assets/images/internet-sales-hits-img.jpg";
 import { Link } from "react-router-dom";
 
 const DefaultComponent = () => {
+  const alertFunction = (e) => {
+    e.stopPropagation();
+    e.preventDefault();
+
+    const a = e.target.closest("a");
+    const href = a.href;
+    const link = a.dataset.link;
+
+    alert(`${link} ::: Переход по ссылке : ${href}`);
+  };
+
   return (
     <div>
       <h2 className="font-extrabold text-4xl text-center mt-4">Default Card</h2>
 
       <section className="w-full flex flex-wrap container px-4">
-        {/* Первая версия карточки товара */}
+        {/* Первая версия карточки товара (c одной ссылкой)*/}
         <section className="">
           <h4 className="font-extrabold text-4xl text-center mt-8">
             Первая реализация
           </h4>
-          <Link to="/Первая версия карточки товара" className="w-full max-w-[422px] min-w-[260px] select-none flex flex-col items-center my-8 mx-auto bg-gray-100">
+          <a
+            onClick={alertFunction}
+            data-link="Первая версия карточки товара(c одной ссылкой)"
+            href="/following-a-link"
+            className="w-full max-w-[422px] min-w-[260px] select-none flex flex-col items-center my-8 mx-auto bg-gray-100"
+          >
             <h3>Item header</h3>
             <p>Item long description</p>
             <img src={img} />
-          </Link>
+          </a>
 
           <div>
-            <h2><b>Проблема</b></h2>
+            <h2>
+              <b>Проблема</b>
+            </h2>
             <p>
               Во-первых это не семантично. Ссылка предполагает наличие внутри
               себя текста, который описывает, куда она ведет. Помещать туда
@@ -41,12 +59,14 @@ const DefaultComponent = () => {
 
           <article className="relative z-0 flex flex-col items-center my-8 mx-auto bg-gray-100">
             <h4>
-              <Link
-                to="/Вторая версия карточки товара (c одной ссылкой)"
+              <a
+                onClick={alertFunction}
+                data-link="Вторая версия карточки товара (c одной ссылкой)"
+                href="/following-a-link"
                 className="cursor-pointer before:content-[''] before:block before:absolute before:-inset-0"
               >
                 Item header
-              </Link>
+              </a>
             </h4>
             <p>Item long description</p>
             <img src={img} />
@@ -65,8 +85,7 @@ const DefaultComponent = () => {
           </div>
         </section>
 
-        {/* Третья версия карточки товара (с множеством ссылок)*/}
-
+        {/* Третья версия карточки товара (с множеством ссылок) */}
         <section className="w-full flex flex-col justify-between">
           <h2 className="font-extrabold text-4xl text-center mt-8">
             "Вложенные" ссылки
@@ -74,16 +93,24 @@ const DefaultComponent = () => {
 
           <article className="relative z-0 flex flex-col items-center my-8 mx-auto bg-gray-100">
             <h3>
-              <Link
-                to="/Третья версия карточки товара (с множеством ссылок)"
+              <a
+                onClick={alertFunction}
+                data-link="Третья версия карточки товара (с множеством ссылок)"
+                href="/following-a-link"
                 className="before:content-[''] before:block before:absolute before:-inset-0 before:cursor-pointer before:-z-[1]
             hover:bg-red-500"
               >
                 Item header
-              </Link>
+              </a>
             </h3>
             <p className="pointer-events-none">Item long description</p>
-            <Link to="/author">Michael Bazhanov</Link>
+            <a
+              onClick={alertFunction}
+              data-link="Третья версия карточки товара (с множеством ссылок)"
+              href="/following-a-author"
+            >
+              Michael Bazhanov
+            </a>
             <img src={img} className="pointer-events-none" />
           </article>
 
