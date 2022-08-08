@@ -72,6 +72,7 @@ const Layout = () => {
                   title="Default example"
                   to="/"
                   active={active}
+                  setActive={setActive}
                 >
                   <Svg
                     src={card_svg}
@@ -92,6 +93,7 @@ const Layout = () => {
                   title="Internet sales hits"
                   to="/internet-sales-hits"
                   active={active}
+                  setActive={setActive}
                 >
                   <Svg
                     src={card_svg}
@@ -112,6 +114,7 @@ const Layout = () => {
                   to="/recommended-today"
                   title="Recommended today"
                   active={active}
+                  setActive={setActive}
                 >
                   <Svg
                     src={card_svg}
@@ -133,6 +136,7 @@ const Layout = () => {
                   to="/popular-categories"
                   title="Popular categories"
                   active={active}
+                  setActive={setActive}
                 >
                   <Svg
                     src={card_svg}

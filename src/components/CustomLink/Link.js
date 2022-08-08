@@ -1,19 +1,20 @@
 import React from "react";
-import { Link, useMatch } from "react-router-dom";
+import { Link, useMatch, useResolvedPath } from "react-router-dom";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-const LinkCustom = ({ children, to, active, title, ...props }) => {
-  const match = useMatch({
-    path: to,
-    end: to.length === 1,
-  });
+const LinkCustom = ({ children, to, active, setActive, title, ...props }) => {
+
+  let resolved = useResolvedPath(to);
+  let match = useMatch({ path: resolved.pathname, end: true });
+
+  const matchMedia = window.matchMedia("(min-width: 640px)").matches
 
   return (
-
     <Link
+      onClick={() => active && !matchMedia && setActive(!active)}
       to={to}
       title={title}
       className={classNames(
