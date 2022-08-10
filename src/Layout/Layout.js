@@ -11,7 +11,7 @@ function classNames(...classes) {
 }
 
 const Layout = () => {
-  const [active, setActive] = useState(false);
+  const [active, setActive] = useState(true); // Default false
 
   return (
     <>

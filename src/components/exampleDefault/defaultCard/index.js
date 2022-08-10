@@ -17,9 +17,9 @@ const DefaultComponent = () => {
     <div>
       <h2 className="font-extrabold text-4xl text-center mt-4">Default Card</h2>
 
-      <section className="w-full flex flex-wrap container px-4">
+      <section className="w-full flex flex-wrap px-4">
         {/* Первая версия карточки товара (c одной ссылкой)*/}
-        <section className="">
+        <section className="w-full flex flex-col justify-between">
           <h4 className="font-extrabold text-4xl text-center mt-8">
             Первая реализация
           </h4>

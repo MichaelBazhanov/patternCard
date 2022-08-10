@@ -1,19 +1,13 @@
-import img_divan from "../../../assets/images/internet-sales-hits-img.jpg";
-import svg_like from "../../../assets/images/like.svg";
-import svg_in_stock from "../../../assets/images/in-stock.svg";
-import svg_trends from "../../../assets/images/trends.svg";
-import svg_sale from "../../../assets/images/sale.svg";
+import divan from "../../../assets/images/divan.jpg";
+import PositionInCard from "../positionInCard";
 
-// test HandySvg
+// HandySvg
 import Svg from "../../svg";
-import { useState } from "react";
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
+import label from "../../../assets/images/label.svg";
+// import label2 from "../../../assets/images/icon.svg";
 
 const AfterCard = () => {
-  const [like, setLike] = useState(false);
+  // const [like, setLike] = useState(false);
 
   const alertFunction = (e) => {
     e.stopPropagation();
@@ -29,140 +23,84 @@ const AfterCard = () => {
   return (
     <section
       className="px-4 w-full 2sm:w-1/2 h-[calc(100vh-60px)] flex flex-col justify-between items-center
-    bg-gradient-to-t from-white  to-fuchsia-400"
+    bg-gradient-to-t from-white to-fuchsia-400"
     >
       <h2 className="font-extrabold text-4xl text-center mt-4">After Card</h2>
 
-      <article className="w-full max-w-[422px] min-w-[260px] bg-white select-none">
-        {/* COMPONENT CARD */}
-        <div className="relative">
-          {/* COMPONENT IMG */}
+      <article className="bg-stone-300 rounded-md
+      w-[300px] h-[356px] p-[10px] xl:w-[400px] xl:h-[500px] 3xl:w-[573px] 3xl:h-[500px] ">
+        <div className="relative pb-[119%]">
           <a
             onClick={alertFunction}
             data-link="Карточка товара (c множеством ссылок)"
             href="/following-a-link-1"
-            className="cursor-pointer block relative landscape:pb-[66.25%] portrait:pb-[75%]"
+            className="absolute inset-0 flex flex-col text-white
+            p-[20px] pt-[15px] xl:p-[25px] xl:pb-[30px] 3xl:p-[25px] 3xl:pb-[40px]
+            "
           >
-            <img
-              src={img_divan}
-              alt="img"
-              className="absolute inset-0 w-full h-full object-cover"
-            />
-          </a>
+            <img src={divan} alt="img" role='img' className="z-[1] absolute inset-0 w-full h-full object-center object-cover"/>
 
-          {/* COMPONENT LIKE */}
-          <div onClick={() => setLike(!like)}>
-            <Svg
-              src={svg_like}
-              className={classNames(
-                `
-                z-[2] object-contain cursor-pointer
-                absolute top-[20px] right-[20px]
-                transition-[opacity,colors] ease-in-out duration-200 hover:opacity-50
-                stroke-neutral-700`,
-                like ? "fill-neutral-700" : "fill-transparent"
-              )}
-              width="23"
-              height="22"
-            />
-          </div>
+            <div className="relative w-full h-full inset-0">
 
-          {/* COMPONENT DESCRIPTION CARD */}
-          <div className="flex justify-end absolute bottom-[15px] right-[15px]">
-            <a
-              onClick={alertFunction}
-              data-link="Карточка товара (c множеством ссылок)"
-              href="/category-sale"
-              className="flex justify-center items-center flex-shrink-0 rounded-full w-[50px] h-[50px] 3xl:w-[60px] 3xl:h-[60px] mr-[10px]"
-            >
-              <Svg
-                src={svg_sale}
-                className={classNames(
-                  `object-cover cursor-grab block transition-[opacity,colors] ease-in-out duration-200 hover:opacity-75 text-gray-500 hover:text-red-500`
-                )}
-                width="60"
-                height="60"
-              />
-            </a>
-            <a
-              onClick={alertFunction}
-              data-link="Карточка товара (c множеством ссылок)"
-              href="/category-trends"
-              className="flex justify-center items-center flex-shrink-0 rounded-full w-[50px] h-[50px] 3xl:w-[60px] 3xl:h-[60px] mr-[10px]"
-            >
-              <Svg
-                src={svg_trends}
-                className={classNames(
-                  `object-cover cursor-grab block transition-[opacity,colors] ease-in-out duration-200 hover:opacity-75 text-gray-500 hover:text-red-500`
-                )}
-                width="60"
-                height="60"
-              />
-            </a>
-            <a
-              onClick={alertFunction}
-              data-link="Карточка товара (c множеством ссылок)"
-              href="/category-in-stock"
-              className="flex justify-center items-center flex-shrink-0 rounded-full w-[50px] h-[50px] 3xl:w-[60px] 3xl:h-[60px]"
-            >
-              <Svg
-                src={svg_in_stock}
-                className={classNames(
-                  `object-cover cursor-grab block transition-[opacity,colors] ease-in-out duration-200 hover:opacity-75 text-gray-500 hover:text-red-500`
-                )}
-                width="60"
-                height="60"
-              />
-            </a>
-          </div>
-        </div>
+              <PositionInCard top='0px' left='0px'>
+                <a
+                onClick={alertFunction}
+                data-link="Карточка товара (c множеством ссылок)"
+                href="/following-a-link-4"
+                className="z-[2] relative whitespace-nowrap font-medium text-sm xl:text-lg 3xl:text-2xl">1 — 9 августа</a>
+              </PositionInCard>
 
-        {/* COMPONENT DESCRIPTION PRICE */}
-        <div className="mt-[20px]">
-          <a
-            onClick={alertFunction}
-            data-link="Карточка товара (c множеством ссылок)"
-            href="/link-divan"
-            className="inline-block max-w-full overflow-hidden whitespace-nowrap text-ellipsis"
-          >
-            Диван Динс Мини Velvet Yellow
-          </a>
-          <div className="flex items-baseline">
-            <span className="text-lg font-medium text-red-500 after:content-['\20bd'] after:ml-1">
-              39 990
-            </span>
-            &nbsp;
-            <span className="ml-[10px] text-lg font-medium line-through text-gray-400 after:content-['\20bd'] after:ml-1">
-              62 290
-            </span>
-            <div className="bg-label bg-no-repeat bg-contain  w-[50px] h-[24px] font-medium text-gray-400 text-sm ml-[10px]">
-              <div className="flex justify-center items-center pl-[5px]">
-                -35%
-              </div>
+              <PositionInCard bottom='0px' left='0px' right='0px'>
+                <a onClick={alertFunction}
+                    data-link="Карточка товара (c множеством ссылок)"
+                    href="/following-a-link-3">
+
+                <div className="z-[2] relative font-medium text-xl 3xl:text-3xl">Звездный август</div>
+                <div className="z-[2] relative mt-[5px] xl:mt-[10px] 3xl:mt-[15px] text-sm xl:text-lg 3xl:text-2xl">
+                  Погружаемся в комфорт
+                  <br />
+                  со скидками до -50%
+                </div>
+                </a>
+              </PositionInCard>
+
+              <PositionInCard top='0px' right='0px'>
+                <div className="z-[2] relative w-[66px] h-[29px] flex justify-center items-center">
+                  <Svg
+                    src={label}
+                    className='absolute inset-0'
+                    adoptive
+                    />
+
+                    <a
+                    onClick={alertFunction}
+                    data-link="Карточка товара (c множеством ссылок)"
+                    href="/following-a-link-2"
+                    className="z-[2] relative text-black px-[10px]_ py-[5px]_ ml-auto mr-2 whitespace-nowrap font-medium text-sm xl:text-lg 3xl:text-2xl
+                    ">−50%</a>
+                </div>
+              </PositionInCard>
+
             </div>
-          </div>
+
+          </a>
         </div>
       </article>
 
-      <p className="max-h-52 h-full flex flex-col justify-end">
+      <p className="max-h-[350px] h-full flex flex-col justify-end">
         <b className="block">
           Задача:
           <br />
-          1) Реализовать на карточке товара множество ссылок на акции,
-          категории, и тд и тп.
+          1) Сделать карточку товара как можно проще (адаптив не выключен)
           <br />
-          2) Реализовать простую работу с векторной графикой (SVG) на карточке
+          2) Реализовать на карточке товара множество ссылок на акции,
+          категории, и тд и тп. (что бы из карточки по ним можно было реально переходить)
+          <br />
+          3) Реализовать простую работу с векторной графикой (SVG) на карточке
           товара.
+          <br />
+          4) Реализовать компоннет React который бы позиционировал блоки внутри карточки (использую абсолютное позиционирование).
         </b>
-        <span>
-          Простая семантическая карточка ссылка, по версии WebStandards 2022
-        </span>
-        <a
-          href="https://ru.ariarzer.dev/tutorials/2022/easy-semantic-card-link.html"
-          className="font-medium text-slate-600"
-        >
-          (ссылка на саму статью)
-        </a>
       </p>
     </section>
   );

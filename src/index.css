@@ -11,6 +11,9 @@
   html ::-webkit-scrollbar-thumb {
     @apply rounded-sm bg-fuchsia-400;
   }
+  a {
+    @apply block hover:bg-red-300 hover:bg-opacity-20
+  }
 }
 @layer components {
   .navigation-item {

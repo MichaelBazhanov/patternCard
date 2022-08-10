@@ -16,12 +16,11 @@ const BeforeCard = () => {
     <section className="px-4 w-full 2sm:w-1/2 h-[calc(100vh-60px)] flex flex-col justify-between items-center">
       <h2 className="font-extrabold text-4xl text-center mt-4">Before Card</h2>
 
-      {/* <div className="max-w-[422px] min-w-[260px] bg-white"> */}
       <div className="w-[300px] h-[356px] p-[10px] xl:w-[400px] xl:h-[500px] 3xl:w-[573px] 3xl:h-[500px] ">
         <div className="relative before:block before:pb-[119%]">
           <a
             onClick={alertFunction}
-            data-link="Карточка товара (c множеством ссылок)"
+            data-link="Карточка товара (c одной ссылкой)"
             href="/following-a-link"
             className="absolute inset-0 flex flex-col p-[20px] pt-[15px] xl:p-[25px] xl:pb-[30px] 3xl:p-[25px] 3xl:pb-[40px] text-white"
           >
@@ -45,7 +44,7 @@ const BeforeCard = () => {
         </div>
       </div>
 
-      <p className="max-h-52 h-full flex flex-col justify-end">
+      <p className="max-h-[350px] h-full flex flex-col justify-end">
         Стандартная карточка товара интернет магазина
         <a
           href="https://www.divan.ru/vladimir/"
