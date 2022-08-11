@@ -3,8 +3,8 @@ import PositionInCard from "../positionInCard";
 
 // HandySvg
 import Svg from "../../svg";
-import label from "../../../assets/images/label.svg";
-// import label2 from "../../../assets/images/icon.svg";
+// import label from "../../../assets/images/label.svg";
+import label from "../../../assets/images/example-label-3.svg";
 
 const AfterCard = () => {
   // const [like, setLike] = useState(false);
@@ -65,10 +65,10 @@ const AfterCard = () => {
               </PositionInCard>
 
               <PositionInCard top='0px' right='0px'>
-                <div className="z-[2] relative w-[66px] h-[29px] flex justify-center items-center">
+                <div className="z-[2] relative w-[66px] h-[29px] flex justify-center items-center group">
                   <Svg
                     src={label}
-                    className='absolute inset-0'
+                    className='absolute inset-0 text-fuchsia-400 hover:text-fuchsia-700 transition-colors'
                     adoptive
                     />
 
@@ -77,6 +77,7 @@ const AfterCard = () => {
                     data-link="Карточка товара (c множеством ссылок)"
                     href="/following-a-link-2"
                     className="z-[2] relative text-black px-[10px]_ py-[5px]_ ml-auto mr-2 whitespace-nowrap font-medium text-sm xl:text-lg 3xl:text-2xl
+                    pointer-events-none group-hover:text-white transition-colors
                     ">−50%</a>
                 </div>
               </PositionInCard>

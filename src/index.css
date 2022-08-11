@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
   /* scroll */
   html ::-webkit-scrollbar {
@@ -12,8 +11,58 @@
     @apply rounded-sm bg-fuchsia-400;
   }
   a {
-    @apply block hover:bg-red-300 hover:bg-opacity-20
+    @apply block hover:bg-red-300 hover:bg-opacity-20;
   }
+   /* //не работает в хроме */
+  /* symbol #path-1 */
+
+  /* //не работает в хроме */
+  /* #parent #path-1 {
+    fill: red;
+  }
+  #parent #path-2 {
+    fill: yellow;
+  }
+  #parent:hover #path-1 {
+    fill: green;
+  }
+  #parent:hover #path-2 {
+    fill: blue;
+  } */
+
+ /* //не работает в хроме */
+  /* #path-1 {
+    fill: red;
+  }
+  #path-1:hover {
+    fill: green;
+  } */
+  /* svg:hover {
+    fill: red;
+  }
+  svg:hover use {
+    fill: red;
+  } */
+
+  /* рабочая часть */
+  /* g {
+    fill: blue;
+  }
+  g:hover {
+    fill: yellow;
+  }
+
+  svg g:hover path#path-1 {
+    fill: red;
+  }
+  svg g#parent:hover path#path-1 {
+    fill: green;
+  } */
+  /* рабочая часть */
+  /* svg:hover symbol #parent #path-1 {
+    fill: green;
+  } */
+
 }
 @layer components {
   .navigation-item {
@@ -26,6 +75,7 @@
 
     after:pointer-events-none after:will-change-[box-shadow]
     after:absolute after:-bottom-15 after:right-0 after:w-15 after:h-15 after:bg-transparent after:rounded-full after:shadow-white
-    hover:after:shadow-rounded-bottom
+    hover:after:shadow-rounded-bottom;
   }
 }
+

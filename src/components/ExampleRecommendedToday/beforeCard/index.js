@@ -18,10 +18,10 @@ const BeforeCard = () => {
 
       <div className="w-[300px] h-[356px] p-[10px] xl:w-[400px] xl:h-[500px] 3xl:w-[573px] 3xl:h-[500px] ">
         <div className="relative before:block before:pb-[119%]">
-          <a
-            onClick={alertFunction}
-            data-link="Карточка товара (c одной ссылкой)"
-            href="/following-a-link"
+          <div
+            // onClick={alertFunction}
+            // data-link="Карточка товара (c одной ссылкой)"
+            // href="/following-a-link"
             className="absolute inset-0 flex flex-col p-[20px] pt-[15px] xl:p-[25px] xl:pb-[30px] 3xl:p-[25px] 3xl:pb-[40px] text-white"
           >
             <img src={divan} alt="img" role='img' className="z-[1] absolute inset-0 w-full h-full object-center object-cover"/>
@@ -40,7 +40,7 @@ const BeforeCard = () => {
               font-medium text-sm xl:text-lg 3xl:text-2xl
               ">до −50%</span>
             </div>
-          </a>
+          </div>
         </div>
       </div>
 
