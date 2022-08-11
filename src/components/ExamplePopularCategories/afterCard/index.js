@@ -3,10 +3,10 @@ import PositionInCard from "../positionInCard";
 
 // HandySvg
 import Svg from "../../svg";
+// import label from "../../../assets/images/label.svg";
 import label from "../../../assets/images/example-label-3.svg";
 
 const AfterCard = () => {
-
   const alertFunction = (e) => {
     e.stopPropagation();
     e.preventDefault();
@@ -20,7 +20,7 @@ const AfterCard = () => {
 
   return (
     <section
-      className="px-4 w-full 2sm:w-1/2 h-[calc(100vh-60px)] flex flex-col justify-between items-center
+      className="h-[calc(100vh-60px)] flex flex-col justify-between items-center
     bg-gradient-to-t from-white to-fuchsia-400"
     >
       <h2 className="font-extrabold text-4xl text-center mt-4">After Card</h2>

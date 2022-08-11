@@ -44,7 +44,7 @@ const BeforeCard = () => {
         </div>
       </div>
 
-      <p className="max-h-[350px] h-full flex flex-col justify-end">
+      <p className="max-h-[350px] h-full flex flex-col justify-end text-sm">
         Стандартная карточка товара интернет магазина
         <a
           href="https://www.divan.ru/vladimir/"

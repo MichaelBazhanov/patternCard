@@ -62,7 +62,19 @@
   /* svg:hover symbol #parent #path-1 {
     fill: green;
   } */
+  .test::before {
+    /* @apply before:content-[''] before:bg-left-arrow before:w-[33px] xl:before:bg-contain before:bg-no-repeat before:bg-center before:bg-[length:35%_center]_____ bg-[center_top_1rem] */
+    /* background-size: contain; */
+    /* content: ""; */
+    /* height: 100%; */
+    /* width: 33px; */
 
+    @apply content-[''] absolute left-[-27px] top-0 h-full w-[33px] bg-left-arrow bg-no-repeat bg-center bg-contain ;
+    /* left: -27px;
+    position: absolute;
+    top: 0; */
+
+  }
 }
 @layer components {
   .navigation-item {
