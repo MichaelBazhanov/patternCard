@@ -24,8 +24,10 @@
     "deploy": "gh-pages -d build",
     "0-step-predeploy-comment": "react-scripts build // билдим проект",
     "0-step-deploy-comment": "gh-pages -d build // (проект из папки build будит submit в gh-pages)",
+    "0-step-comment": "Создаем gh-page на репозитории GitHab",
     "1-step-comment": "Устанавливаем npm i gh-pages",
-    "2-step-comment": " 'homepage':'*****' // Вставляем адрес будущего сайта, то место куда все выгрузится из build"
+    "2-step-comment": " 'homepage': 'https://michaelbazhanov.github.io/patternCard/' // Вставляем адрес будущего сайта, то место куда все выгрузится из build",
+    "3-step-comment": "Делаем gh-page на репозитории GitHab по умолчанию веткой"
   },
   "eslintConfig": {
     "extends": [
