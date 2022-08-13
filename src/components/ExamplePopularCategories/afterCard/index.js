@@ -1,5 +1,5 @@
 import pramye_divany from "../../../assets/images/pramye_divany.jpg";
-// import PositionInCard from "../positionInCard";
+import PositionInCardToGrid from "../positionInCardToGrid";
 
 // // HandySvg
 // import Svg from "../../svg";
@@ -25,14 +25,14 @@ const AfterCard = () => {
     >
       <h2 className="font-extrabold text-4xl text-center mt-4">After Card</h2>
 
-      <article className="w-full relative pb-[66.25%] rounded-md overflow-hidden">
-        <div className="absolute inset-0 flex flex-col p-[20px] pt-[15px] xl:p-[25px] xl:pb-[30px] 3xl:p-[25px] 3xl:pb-[40px] text-black">
+      <article className="w-full relative rounded-md">
+        <div className="relative pb-[66.25%]">
           {/* img card */}
           <a
             onClick={alertFunction}
             data-link="Карточка товара (с множеством ссылок)"
             href="/following-a-link-1"
-            className="absolute inset-0 z-0"
+            className="absolute inset-0"
           >
             <img
               src={pramye_divany}
@@ -42,38 +42,76 @@ const AfterCard = () => {
             />
           </a>
 
-
           {/* Общее позиционирование внутри блока */}
           <div
-            className="absolute inset-0 flex flex-col text-white
+            className="absolute inset-0 grid grid-cols-6 grid-rows-6
             p-[20px] pt-[15px] xl:p-[25px] xl:pb-[30px] 3xl:p-[25px] 3xl:pb-[40px]
             "
           >
-
-          </div>
-          {/* top title */}
-          <div className="z-[2] relative flex">
-            <span className="text-lg font-medium">Диваны прямые</span>
-            <span className="ml-2 text-xs text-gray-300">602 модели</span>
-          </div>
-
-          {/* price item*/}
-          <div
-            className="z-[2] absolute left-[20px] bottom-[20px] flex justify-end
-            ml-[20px]
-            before:content-[''] before:absolute before:left-[-27px] before:top-0 before:h-full before:w-[33px] before:bg-left-arrow before:bg-no-repeat before:bg-center before:bg-contain
-            "
-          >
-            <span
-              className="px-[20px] py-[4px] bg-white text-black whitespace-nowrap rounded-tr-lg rounded-br-lg
-              font-medium text-lg
-              "
+            {/* top title */}
+            <PositionInCardToGrid
+              className="z-[2] relative col-start-1 col-end-7 row-start-1 row-end-2
+            justify-start items-start"
             >
-              от&nbsp;
-              <span className="text-lg font-medium after:content-['\20BD'] after:ml-1">
-                19 490
-              </span>
-            </span>
+              <a
+                onClick={alertFunction}
+                data-link="Карточка товара (с множеством ссылок)"
+                href="/following-a-link-2"
+                className="inline-flex"
+              >
+                <h4 className="text-lg font-medium">Диваны прямые</h4>
+                <span className="ml-2 text-xs text-gray-300">602 модели</span>
+              </a>
+            </PositionInCardToGrid>
+
+            {/* price item*/}
+            <PositionInCardToGrid
+              className="z-[2] relative col-start-1 col-end-6 row-start-6 row-end-6
+              flex justify-start items-end"
+            >
+              <a
+                onClick={alertFunction}
+                data-link="Карточка товара (с множеством ссылок)"
+                href="/following-a-link-3"
+                className="z-[2] relative ml-[20px] inline-flex
+                before:content-[''] before:absolute before:left-[-26px] before:top-0 before:h-full before:w-[33px] before:bg-left-arrow before:bg-no-repeat before:bg-center before:bg-contain
+              "
+              >
+                <span
+                  className="px-[20px] py-[4px] bg-white text-black whitespace-nowrap rounded-tr-lg rounded-br-lg
+                font-medium text-lg
+                "
+                >
+                  от&nbsp;
+                  <span className="text-lg font-medium after:content-['\20BD'] after:ml-1">
+                    19 490
+                  </span>
+                </span>
+              </a>
+            </PositionInCardToGrid>
+
+            {/* Добавляем случайный элемент для теста позиции*/}
+            <PositionInCardToGrid className="z-[2] relative col-start-6 col-end-7 row-start-6 row-end-6">
+              <a
+                onClick={alertFunction}
+                data-link="Карточка товара (с множеством ссылок)"
+                href="/following-a-link-4"
+                className="bg-indigo-600 w-14 h-14 whitespace-nowrap rounded-full flex justify-center items-center text-white"
+              >
+                test-1
+              </a>
+            </PositionInCardToGrid>
+            {/* Добавляем случайный элемент для теста позиции*/}
+            <PositionInCardToGrid className="z-[2] relative col-start-3 col-end-4 row-start-3 row-end-4">
+              <a
+                onClick={alertFunction}
+                data-link="Карточка товара (с множеством ссылок)"
+                href="/following-a-link-5"
+                className="bg-pink-600 w-14 h-14 whitespace-nowrap rounded-full flex justify-center items-center text-white"
+              >
+                test-2
+              </a>
+            </PositionInCardToGrid>
           </div>
         </div>
       </article>
