@@ -23,6 +23,7 @@ const BeforeCard = () => {
           href="/following-a-link"
           className="absolute inset-0 flex flex-col p-[20px] pt-[15px] xl:p-[25px] xl:pb-[30px] 3xl:p-[25px] 3xl:pb-[40px] text-black"
         >
+          {/* img card */}
           <img
             src={pramye_divany}
             alt="img"
@@ -30,11 +31,13 @@ const BeforeCard = () => {
             className="z-[1] absolute inset-0 w-full h-full object-center object-cover"
           />
 
+          {/* top title */}
           <div className="z-[2] relative flex">
             <span className="text-lg font-medium">Диваны прямые</span>
             <span className="ml-2 text-xs text-gray-300">602 модели</span>
           </div>
 
+          {/* price item*/}
           <div
             className="z-[2] absolute left-[20px] bottom-[20px] flex justify-end
             ml-[20px]
