@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/patternCard/static/css/main.a4caaa8f.css",
+    "main.js": "/patternCard/static/js/main.fa92650b.js",
+    "static/media/divan.jpg": "/patternCard/static/media/divan.acd8850d157b1bb7a5e9.jpg",
+    "static/media/pramye_divany.jpg": "/patternCard/static/media/pramye_divany.289ee9dc93f484f49ecd.jpg",
+    "static/media/internet-sales-hits-img.jpg": "/patternCard/static/media/internet-sales-hits-img.be91083cbf4696b628ff.jpg",
+    "static/media/trends.svg": "/patternCard/static/media/trends.2a1d5e9bba0588123759db154be4790a.svg",
+    "static/media/example-label-3.svg": "/patternCard/static/media/example-label-3.5d48f02137940800a6d9571cfc69fe7a.svg",
+    "static/media/label.svg": "/patternCard/static/media/label.8ba5d6e8a933545d700f.svg",
+    "static/media/in-stock.svg": "/patternCard/static/media/in-stock.d4a446f28fd6d7498daea9e82f82e3aa.svg",
+    "static/media/sale.svg": "/patternCard/static/media/sale.7db2ccaacb70c31f790b6a071bf0e8b5.svg",
+    "index.html": "/patternCard/index.html",
+    "static/media/left-arrow.svg": "/patternCard/static/media/left-arrow.302f7f4561420c5c2f90.svg",
+    "static/media/card.svg": "/patternCard/static/media/card.051051c13803ecbd8100873e9c8a67c2.svg",
+    "static/media/toggle-bar.svg": "/patternCard/static/media/toggle-bar.6c62a99732bd5a46ea21398e5f15f330.svg",
+    "static/media/like.svg": "/patternCard/static/media/like.f3c45a4d35f4041725d3c954f6f15b6e.svg",
+    "static/media/general.svg": "/patternCard/static/media/general.aa5c7f4f7200acdfb0b43a8a9e660839.svg",
+    "main.a4caaa8f.css.map": "/patternCard/static/css/main.a4caaa8f.css.map",
+    "main.fa92650b.js.map": "/patternCard/static/js/main.fa92650b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a4caaa8f.css",
+    "static/js/main.fa92650b.js"
+  ]
+}
