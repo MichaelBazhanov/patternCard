@@ -2,7 +2,7 @@
   "name": "pattern-card",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://michaelbazhanov.github.io/patternCard",
+  "homepage": "https://michaelbazhanov.github.io/patternCard/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.3.0",
@@ -20,7 +20,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "react-scripts build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "0-step-predeploy-comment": "react-scripts build // билдим проект",
     "0-step-deploy-comment": "gh-pages -d build // (проект из папки build будит submit в gh-pages)",
